@@ -273,6 +273,10 @@ namespace OptiTrack {
                     if (iResult == ErrorCode_OK)
                         printf("[SampleClient] Disconnected");
                     break;
+                case 'c' :
+                    // stops the streaming
+                    
+
                 default:
                     break;
             }

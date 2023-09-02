@@ -60,10 +60,9 @@ namespace OptiTrack {
         private:
 
     };
-
+    
     static int g_analogSamplesPerMocapFrame;
     static std::vector< sNatNetDiscoveredServer > g_discoveredServers;
-    
     void DataHandler(sFrameOfMocapData* data, void* pUserData);
     void MessageHandler( Verbosity msgType, const char* msg );
     void ServerDiscoveredCallback( const sNatNetDiscoveredServer* pDiscoveredServer, void* pUserContext );
