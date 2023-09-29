@@ -272,10 +272,7 @@ namespace OptiTrack {
                     iResult = g_pClient->SendMessageAndWait("Disconnect", &response, &nBytes);
                     if (iResult == ErrorCode_OK)
                         printf("[SampleClient] Disconnected");
-                    break;
-                case 'c' :
-                    // stops the streaming
-                    
+                    break;                    
 
                 default:
                     break;
