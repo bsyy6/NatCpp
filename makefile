@@ -2,6 +2,8 @@ include=-I$(CURDIR)/include
 libpath=-L$(CURDIR)/lib
 libs=-lNatNet
 
+LD_LIBRARY_PATH=$(CURDIR)/lib
+
 all: build/SampleClient
 
 build/SampleClient: src/main.cpp src/NatServer.cpp
