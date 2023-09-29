@@ -1,30 +1,43 @@
-A c++ class to communicate with NatNet server, this class supports all the standard functionalaties in the SampleClient.cpp provided by OptiTrack.
+## NatNet C++ Client class
 
-the class abstraction is easy to include in existing code as a seperate object.
+This C++ class, `NatNetClient`, facilitates communication with the NatNet server and supports standard functionalities as seen in OptiTrack's SampleClient.cpp.
 
-[0] navigate to the folder /NatCpp
+It allows you to create custom "DataHandler" making the communication faster and allowing you to read unlabled markers detected by the OptiTrack.
 
-[0] to run correcly you need to have the build-essential tools
+This lilbrary is used in my other project 'NatRos' found here.
 
-sudo apt-get install build-essential
+### Linux
 
-[0] you also need to add the library file in the system paths, run the following:
+To compile and run the program on Linux:
 
-sudo cp lib/libNatNet.so /lib
+1. Navigate to the `/NatCpp` folder.
+2. Ensure you have the necessary build tools:
+    ```bash
+    sudo apt-get install build-essential
+    ```
+3. Add the library file to the system paths:
+    ```bash
+    sudo cp lib/libNatNet.so /lib
+    ```
+4. Build the program:
+    ```bash
+    make clean
+    make -f makefile
+    ```
+5. Move to the build folder:
+    ```bash
+    cd build
+    ```
+6. Run the program:
+    ```bash
+    ./SampleClient
+    ```
 
-[2] build the program
-    - make clean
-    - make -f makefile
+### Windows build
+~ To do
+Instructions for building and running the program on Windows are not provided in this README. Please refer to the appropriate build and run steps for your development environment.
+it should not be that hard to mimick this repo and create a new one for 
 
-[3] move to build folder 
-cd build
+### Usage Example
 
-[4] run the program
-./SampleClient
-
-check src/main.cpp for a simple example on how to use this class.
-
-
-To do:
-
-- Winodws-compatible version.
+For a simple usage example of this class, refer to [src/main.cpp](src/main.cpp).
